@@ -9,7 +9,11 @@ module.exports = function(app) {
     var newF = req.body;
     var found = false;
     var tempDiff = 41;
-    var bestMatch = {};
+    var bestMatch = {
+      name: "",
+      photo: "",
+      scores: []
+    };
 
     for (let i = 0; i < people.length; i++) {
       if (newF.name === people[i].name) {
@@ -29,10 +33,9 @@ module.exports = function(app) {
     }
 
     if (!found) {
-      res.json(bestMatch);
-    } else {
       people.push(newF);
-      res.json(false); //////////////////////////////////
     }
+
+    res.json(bestMatch);
   });
 };
