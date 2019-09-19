@@ -11,7 +11,28 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+
+    <style>
+      body {
+        background-image: url("https://wallpapersite.com/images/wallpapers/lines-2880x1440-light-blue-minimal-lg-v30-stock-hd-9697.jpg");
+        background-size: cover;
+      }
+      .jum1 {
+        background-color: rgba(240, 248, 255, 0.308);
+        margin-top: 20px;
+      }
+
+      .jum2 {
+        background-color: rgba(240, 248, 255, 0.527);
+        padding-bottom: 20px;
+        padding-top: 5px;
+        margin-top: 10px;
+      }
+
+      #jmatch {
+        max-width: 400px;
+      }
+    </style>
   </head>
 
   <body>
@@ -168,7 +189,6 @@
         </div>
 
         <br />
-        
 
         <button
           type="submit"
@@ -272,7 +292,10 @@
             $("#q10").val("");
 
             $(".container").html(
-              "<h1> Match:</h1><br/> <h4>" +
+              "<div id='jmatch' class='jumbotron jum1'></div>"
+            );
+            $("#jmatch").append(
+              "<h1> Match:</h1><hr /><br/> <h4>" +
                 data.name +
                 "</h4> <br/> <img id='pict'  src=" +
                 data.photo +
