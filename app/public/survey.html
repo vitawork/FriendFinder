@@ -78,7 +78,7 @@
       <h4>You rarely do something just out of sheer curiosity.</h4>
       <div class="form-group col-lg-3 col-sm-5">
         <label for="">Select an Option</label>
-        <select class="form-control" id="q14">
+        <select class="form-control" id="q4">
           <option value="1">1 (Strongly Disagree)</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -106,7 +106,7 @@
       </h4>
       <div class="form-group col-lg-3 col-sm-5">
         <label for="">Select an Option</label>
-        <select class="form-control" id="q5">
+        <select class="form-control" id="q6">
           <option value="1">1 (Strongly Disagree)</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -178,7 +178,6 @@
       <br />
       <br />
 
-      <!-- Submit Button -->
       <button
         type="submit"
         class="btn btn-primary btn-lg btn-block"
@@ -191,7 +190,10 @@
       <footer class="footer">
         <div class="container">
           <p>
-            <a href="https://thawing-brushlands-09151.herokuapp.com/api/friends">API Friends List</a> |
+            <a href="https://thawing-brushlands-09151.herokuapp.com/api/friends"
+              >API Friends List</a
+            >
+            |
             <a href="https://github.com/vitawork/FriendFinder">GitHub Repo</a>
           </p>
         </div>
@@ -225,10 +227,12 @@
     ></script>
 
     <script type="text/javascript">
+      $("#close").on("click", function(event) {
+        $(".container").html(b);
+      });
+
       $("#submit").on("click", function(event) {
         event.preventDefault();
-
-        $("#results-modal").modal("toggle");
 
         function validateForm() {
           var valid = true;
@@ -263,7 +267,30 @@
             $("#match-name").text(data.name);
             $("#match-img").attr("src", data.photo);
 
-            $("#results-modal").modal("toggle");
+            $("#name").val("");
+            $("#photo").val("");
+            $("#q1").val("");
+            $("#q2").val("");
+            $("#q3").val("");
+            $("#q4").val("");
+            $("#q5").val("");
+            $("#q6").val("");
+            $("#q7").val("");
+            $("#q8").val("");
+            $("#q9").val("");
+            $("#q10").val("");
+
+            $(".container").html(
+              "<h1> Match:</h1><br/> <h4>" +
+                data.name +
+                "</h4> <br/> <img id='pict'  src=" +
+                data.photo +
+                " alt='' />"
+            );
+
+            $("#pict").css({ "width": "350px", "border-radius": "170px" });
+
+            // $("#results-modal").modal("toggle");
           });
         } else {
           alert("Please complete al info before submitting!");
