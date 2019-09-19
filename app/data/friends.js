@@ -2,7 +2,7 @@
 
 var people = [
   {
-    name: "Ahmed",
+    name: "Ahmed M.",
     photo:"https://timedotcom.files.wordpress.com/2017/12/joey-degrandis-hsam-memory.jpg",
    scores: ["5", "1", "4", "4", "5", "1", "2", "5", "4", "1"]
   },
@@ -36,13 +36,13 @@ var people = [
     scores: ["4", "4", "2", "3", "2", "2", "3", "2", "4", "5"]
   },
   {
-    name: "oscar ",
+    name: "Oscar R.",
     photo:
       "https://d1rkab7tlqy5f1.cloudfront.net/LR/Organisatie/Afdelingen/Aerodynamics__Wind_Energy__Flight_Performance_and_Propulsion/Aerodynamics/People/M_Schmelzer.jpg",
     scores: ["3", "2", "3", "3", "3", "3", "3", "3", "3", "4"]
   },
   {
-    name: "danyel",
+    name: "Danyel P.",
     photo:
       "https://pbs.twimg.com/profile_images/417046827943591936/m5T1WY4g.jpeg",
     scores: ["2", "2", "2", "2", "2", "2", "2", "2", "2", "2"]
