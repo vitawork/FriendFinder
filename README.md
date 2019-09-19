@@ -1,2 +1,2 @@
 # FriendFinder
-An app to find your true match.
+An app to find your true match friend.
